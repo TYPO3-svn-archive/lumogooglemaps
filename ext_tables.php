@@ -1,30 +1,30 @@
 <?php
 
 if (!defined ('TYPO3_MODE')) {
-	die ('Access denied.');
+    die ('Access denied.');
 }
 
 $tempColumns = Array (
-	"tx_lumogooglemaps_longitude" => Array (
-		"exclude" => 1,
-		"label" => "LLL:EXT:lumogooglemaps/locallang_db.xml:tt_address.tx_lumogooglemaps_longitude",
-		"config" => Array (
-			"type" => "input",
-			"size" => "20",
-			"max" => "20",
-			"eval" => "nospace",
-		)
-	),
-	"tx_lumogooglemaps_latitude" => Array (
-		"exclude" => 1,
-		"label" => "LLL:EXT:lumogooglemaps/locallang_db.xml:tt_address.tx_lumogooglemaps_latitude",
-		"config" => Array (
-			"type" => "input",
-			"size" => "20",
-			"max" => "20",
-			"eval" => "nospace",
-		)
-	),
+    "tx_lumogooglemaps_longitude" => Array (
+        "exclude" => 1,
+        "label" => "LLL:EXT:lumogooglemaps/locallang_db.xml:tt_address.tx_lumogooglemaps_longitude",
+        "config" => Array (
+            "type" => "input",
+            "size" => "20",
+            "max" => "20",
+            "eval" => "nospace",
+        )
+    ),
+    "tx_lumogooglemaps_latitude" => Array (
+        "exclude" => 1,
+        "label" => "LLL:EXT:lumogooglemaps/locallang_db.xml:tt_address.tx_lumogooglemaps_latitude",
+        "config" => Array (
+            "type" => "input",
+            "size" => "20",
+            "max" => "20",
+            "eval" => "nospace",
+        )
+    ),
 );
 
 t3lib_div::loadTCA("tt_address");
@@ -43,7 +43,7 @@ $TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY . '_pi1'] = 'pi
 t3lib_extMgm::addPiFlexFormValue($_EXTKEY . '_pi1', 'FILE:EXT:' . $_EXTKEY . '/pi1/flexform_ds_pi1.xml');
 
 if (TYPO3_MODE=="BE") {
-	$TBE_MODULES_EXT["xMOD_db_new_content_el"]["addElClasses"]["tx_lumogooglemaps_pi1_wizicon"] = t3lib_extMgm::extPath($_EXTKEY) . 'pi1/class.tx_lumogooglemaps_pi1_wizicon.php';
+    $TBE_MODULES_EXT["xMOD_db_new_content_el"]["addElClasses"]["tx_lumogooglemaps_pi1_wizicon"] = t3lib_extMgm::extPath($_EXTKEY) . 'pi1/class.tx_lumogooglemaps_pi1_wizicon.php';
 }
 
 ?>

@@ -240,7 +240,7 @@ class GoogleMapAPI {
      * @var string service name
      */
     var $lookup_service = 'GOOGLE';
-	var $lookup_server = array('GOOGLE' => 'maps.google.com', 'YAHOO' => 'api.local.yahoo.com');
+    var $lookup_server = array('GOOGLE' => 'maps.google.com', 'YAHOO' => 'api.local.yahoo.com');
     
     var $driving_dir_text = array(
             'dir_to' => 'Start address: (include addr, city st/region)',
@@ -936,8 +936,8 @@ class GoogleMapAPI {
         $_output .= 'if (mapObj != "undefined" && mapObj != null) {' . "\n";
         $_output .= sprintf('map = new GMap2(document.getElementById("%s"));',$this->map_id) . "\n";
         if(isset($this->center_lat) && isset($this->center_lon)) {
-			// Special care for decimal point in lon and lat, would get lost if "wrong" locale is set; applies to (s)printf only
-			$_output .= sprintf('map.setCenter(new GLatLng(%s, %s), %d, %s);', number_format($this->center_lat, 6, ".", ""), number_format($this->center_lon, 6, ".", ""), $this->zoom, $this->map_type) . "\n";
+            // Special care for decimal point in lon and lat, would get lost if "wrong" locale is set; applies to (s)printf only
+            $_output .= sprintf('map.setCenter(new GLatLng(%s, %s), %d, %s);', number_format($this->center_lat, 6, ".", ""), number_format($this->center_lon, 6, ".", ""), $this->zoom, $this->map_type) . "\n";
         }
         
         // zoom so that all markers are in the viewport
@@ -985,7 +985,7 @@ class GoogleMapAPI {
        
         if(!empty($this->browser_alert)) {
             $_output .= '} else {' . "\n";
-			$_output .= 'alert("' . str_replace('"','\"',$this->browser_alert) . '");' . "\n";
+            $_output .= 'alert("' . str_replace('"','\"',$this->browser_alert) . '");' . "\n";
             $_output .= '}' . "\n";
         }                        
 
@@ -1045,7 +1045,7 @@ class GoogleMapAPI {
                     }
                     $tab = str_replace('"','\"',$tab);
                     $info = str_replace('"','\"',$info);
-					$info = str_replace(array("\n", "\r"), "", $info);
+                    $info = str_replace(array("\n", "\r"), "", $info);
                     $tab_obs[] = sprintf('new GInfoWindowTab("%s", "%s")', $tab, '<div id=\"gmapmarker\"'.$width_style.'>' . $info . '</div>');
                     $ti++;
                 }
@@ -1241,7 +1241,7 @@ class GoogleMapAPI {
         if (PEAR::isError($_db)) {
             die($_db->getMessage());
         }
-		$_res =& $_db->query("SELECT lon,lat FROM {$this->_db_cache_table} where address = ?", $address);
+        $_res =& $_db->query("SELECT lon,lat FROM {$this->_db_cache_table} where address = ?", $address);
         if (PEAR::isError($_res)) {
             die($_res->getMessage());
         }
