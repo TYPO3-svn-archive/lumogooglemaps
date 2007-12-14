@@ -42,9 +42,9 @@ class tx_lumogooglemaps_pi1 extends tslib_pibase {
     /**
      * The main method of the PlugIn
      *
-     * @param    string        $content: The PlugIn content
-     * @param    array        $conf: The PlugIn configuration
-     * @return    The content that is displayed on the website
+     * @param string $content: The PlugIn content
+     * @param array $conf: The PlugIn configuration
+     * @return The content that is displayed on the website
      */
     function main($content, $conf)    {
         // Initialize
@@ -94,7 +94,7 @@ class tx_lumogooglemaps_pi1 extends tslib_pibase {
     /**
      * Initialize plugin and get configuration values.
      *
-     * @param    array        $conf : configuration array from TS
+     * @param array $conf : configuration array from TS
      */
     function init($conf) {
         // Store configuration
@@ -347,7 +347,7 @@ class tx_lumogooglemaps_pi1 extends tslib_pibase {
     /**
      * Add marker from table tt_address to map
      *
-     * @return    integer    Number of added markers
+     * @return integer Number of added markers
      */
     function addMarkersToMap() {
         // Get pid list for select query
@@ -419,7 +419,7 @@ class tx_lumogooglemaps_pi1 extends tslib_pibase {
     /**
      * Create sidebar HTML from template and list of sidebar items
      *
-     * @return    string    Processed template for sidebar
+     * @return string Processed template for sidebar
      */
     function createSidebar() {
         $sContent = '';
@@ -459,8 +459,8 @@ class tx_lumogooglemaps_pi1 extends tslib_pibase {
     /**
      * Create HTML for info box from template and tt_address item
      *
-     * @param    array    Array containing a tt_address item
-     * @return    string    Processed template for sidebar
+     * @param array Array containing a tt_address item
+     * @return string Processed template for sidebar
      */
     function createInfoBox($lRow) {
         $sContent = '';
@@ -521,8 +521,8 @@ class tx_lumogooglemaps_pi1 extends tslib_pibase {
     /**
      * Create image tag from file name
      *
-     * @param    string    Path to image file
-     * @return    string    Generated image tag
+     * @param string Path to image file
+     * @return string Generated image tag
      */
     function createImage($sImageFile) {
         // Build up configuration array

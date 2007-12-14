@@ -33,8 +33,8 @@ class tx_lumogooglemaps_pi1_wizicon {
 	/**
      * Processing the wizard items array
      *
-     * @param    array        $wizardItems: The wizard items
-     * @return    Modified array with wizard items
+     * @param array  $wizardItems: The wizard items
+     * @return Modified array with wizard items
      */
     function proc($wizardItems)    {
         global $LANG;
@@ -54,7 +54,7 @@ class tx_lumogooglemaps_pi1_wizicon {
     /**
      * Reads the [extDir]/locallang.xml and returns the \$LOCAL_LANG array found in that file.
      *
-     * @return    The array with language labels
+     * @return The array with language labels
      */
     function includeLocalLang()    {
         $llFile = t3lib_extMgm::extPath('lumogooglemaps') . 'locallang.xml';
