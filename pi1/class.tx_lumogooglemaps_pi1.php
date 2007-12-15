@@ -2,7 +2,7 @@
 /*
  * Copyright notice
  *
- * (c) 2007 Thomas Off <typo3@retiolum.de>
+ * (c) 2006-2008 Thomas Off <typo3@retiolum.de>
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is
@@ -22,16 +22,17 @@
  * This copyright notice MUST APPEAR in all copies of the script!
  */
 
-/**
- * Plugin 'Google maps' for the 'lumogooglemaps' extension.
- *
- * @author Thomas Off <typo3@retiolum.de>
- */
-
 require_once(PATH_tslib . 'class.tslib_pibase.php');
 
 require_once(t3lib_extMgm::extPath('lumogooglemaps') . 'Typo3GoogleMapAPI.class.php');
 
+/**
+ * Plugin 'Google maps' for the 'lumogooglemaps' extension.
+ *
+ * @author Thomas Off <typo3@retiolum.de>
+ * @package TYPO3
+ * @subpackage tx_lumogooglemaps
+ */
 class tx_lumogooglemaps_pi1 extends tslib_pibase {
 
     var $prefixId = 'tx_lumogooglemaps_pi1';        // Same as class name
