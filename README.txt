@@ -2,7 +2,7 @@ LumoNet Google Maps
 
 Extension Key: lumogooglemaps
 
-Copyright 2007 Thomas Off <typo3@retiolum.de>
+Copyright 2006-2008 Thomas Off <typo3@retiolum.de>
 
 This extension adds a map from Google Maps to your website. It is based on PHP GoogleMapAPI (http://www.phpinsider.com/php/code/GoogleMapAPI/) by Monte Ohrt which was adapted and partly rewritten to make it more suitable for usage in this extension (e.g. quoting of JavaScript code snippets).
 
