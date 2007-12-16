@@ -24,7 +24,7 @@
 
 require_once(PATH_tslib . 'class.tslib_pibase.php');
 
-require_once(t3lib_extMgm::extPath('lumogooglemaps') . 'Typo3GoogleMapAPI.class.php');
+require_once(t3lib_extMgm::extPath('lumogooglemaps') . 'class.tx_lumogooglemaps_mapapi.php');
 
 /**
  * Plugin 'Google maps' for the 'lumogooglemaps' extension.
@@ -35,9 +35,9 @@ require_once(t3lib_extMgm::extPath('lumogooglemaps') . 'Typo3GoogleMapAPI.class.
  */
 class tx_lumogooglemaps_pi1 extends tslib_pibase {
 
-    var $prefixId = 'tx_lumogooglemaps_pi1';        // Same as class name
-    var $scriptRelPath = 'pi1/class.tx_lumogooglemaps_pi1.php';    // Path to this script relative to the extension dir.
-    var $extKey = 'lumogooglemaps';    // The extension key.
+    var $prefixId = 'tx_lumogooglemaps_pi1'; // Same as class name
+    var $scriptRelPath = 'pi1/class.tx_lumogooglemaps_pi1.php'; // Path to this script relative to the extension dir.
+    var $extKey = 'lumogooglemaps'; // The extension key.
     var $pi_checkCHash = TRUE;
 
     /**
